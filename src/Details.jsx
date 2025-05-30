@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-
-const DetailsScreen = () => {
+import { View, Text, StyleSheet, Image, Button } from "react-native";
+import { Pressable } from 'react-native';
+const DetailsScreen = ({navigation}) => {
   return (
+     <Pressable onPress={() => navigation.navigate('Marks')}>
     <View style={styles.container}>
       <Text style={styles.label}>Address:</Text>
       <Text style={styles.address}>
@@ -14,7 +15,8 @@ const DetailsScreen = () => {
       <Text style={styles.adhar}>6456754273627321</Text>
        <Text style={styles.label}>DateOfBirth:</Text>
       <Text style={styles.date}>23/08/2006</Text>
-    </View>
+     
+    </View></Pressable>
   );
 };
 
@@ -48,6 +50,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginBottom: 30,
   },
+ 
 });
 
 export default DetailsScreen;

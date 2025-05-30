@@ -10,6 +10,7 @@ import LoginScreen from './src/Loginscreen';
 import Dashscreen from './src/Dashscreen';
 import IDCardScreen from './src/Idcard';
 import DetailsScreen from './src/Details';
+import MarkScreen from './src/mark';
 
 enableScreens();
 
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name="Dashscreen" component={Dashscreen} />
         <Stack.Screen name="IDCard" component={IDCardScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Marks" component={MarkScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
